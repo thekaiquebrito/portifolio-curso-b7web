@@ -45,37 +45,7 @@ header .menu-line {
     height: 3px;
     background-color: #fff;
 }
-
-.fechar-menu {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    top: 30px;
-    right: 45px;
-    display: none;
-    z-index: 999;
-}
-.fechar-menu::before,
-.fechar-menu::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 3px;
-    width: 80%;
-    background-color: #000;
-    transform-origin: center;
-}
-
-.fechar-menu::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-.fechar-menu::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-    
-
-
+ 
 
     /* SECTION PRINCIPAL */
 #presentation .container {
