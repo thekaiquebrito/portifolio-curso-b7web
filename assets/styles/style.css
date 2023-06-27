@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+
+    /* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+header .logo {
+    font-size: 32px;
+    font-family: 'Geologica', Helvetica, sans-serif;
+    font-weight: 600;
+}
+header .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
+header .menu-line {
+    height: 3px;
+    background-color: #fff;
+}
+
+.fechar-menu {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 30px;
+    right: 45px;
+    display: none;
+    z-index: 999;
+}
+.fechar-menu::before,
+.fechar-menu::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 3px;
+    width: 80%;
+    background-color: #000;
+    transform-origin: center;
+}
+
+.fechar-menu::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.fechar-menu::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+    
+
+
+
+    /* SECTION PRINCIPAL */
+#presentation .container {
+    height: 100vh;
+    display: flex;
+}
+#presentation .right, #presentation .left {
+    flex: 1;
+    height: 100%;
+}
+.left {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+#presentation .right {
+    background-image: url('/assets/images/retrato.jpg');
+    background-size: cover;
+}
+
+.left .headline-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.left .headline-container h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-top: 0.31rem;
+    margin-bottom: 1.56rem;
+}
+.left .headline-container h2 {
+    font-size: 1.70rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.left .button-container {
+    display: flex;
+    align-items: center;
+    gap: 1.50rem;
+}
+.left .button {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.left .button:hover {
+    background-color: #fff;
+    color: #000; 
+    transition: 0.2s;
+}
+.button1{
+    width: 200px;
+    height: 55px;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 5px #111
+}
+.button2 {
+    width: 140px;
+    height: 55px;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 5px #111
+}
+
+
+    /* RODAPÉ */
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+footer .disclaimer {
+    color: #aaa;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+    /* MEDIA QUERIES */
+
+    @media (max-width: 450px) {
+        :root{
+            font-size: 12px;
+        }
+        header {
+            position: unset;
+        }
+        #presentation .container {
+            flex-direction: column;
+        }
+        #presentation .left {
+            padding: 0;
+        }
+        .left .headline-container {
+            align-items: center;
+            text-align: center;
+        }
+        .left .headline-container h1 {
+            font-size: 4.4rem;
+        }
+        .left .headline-container h2 {
+            font-size: 1.40rem;
+        }
+        .left .button {
+            font-size: 12px;
+            height: 45px;
+        }
+        .button1 {
+            width: 150px;
+        }
+        .button2 {
+            width: 120px;
+        }
+        footer {
+            position: unset;
+        }
+        footer .disclaimer {
+            padding: 10px;
+            font-size: 12px;
+            color: #555;
+        }
+
+
+    }
+
+    @media (max-width: 449px) {
+        header .menu .menu-line {
+            background-color: #000;
+        }
+    }
+
+    @media (min-width: 450px) and (max-width: 850px) {
+        :root {
+            font-size: 15px;
+        }
+        header {
+            position: unset;
+        }
+        header .menu .menu-line {
+            background-color: #000;
+        }
+    
+        #presentation .container {
+            flex-direction: column
+        }
+        #presentation .left {
+            padding: 0;
+            justify-content: center;
+            flex: none;
+            height: 40%;
+        }
+        .left .headline-container {
+            align-items: center;
+        }
+        .left .headline-container h1 {
+            font-size: 4.5rem;
+            text-align: center;
+        }
+        .left .headline-container h2 {
+            font-size: 1.45rem;
+        }
+        footer .disclaimer {
+            padding: 0;
+            color: #aaa;
+            font-size: 12px;
+            text-align: center;
+            font-weight: 700;
+            position: unset;
+        }
+    }
+
+    @media (min-width: 851px) and (max-width: 1000px) {
+        :root {
+            font-size: 14px;
+        }
+
+        #presentation .left {
+            padding: 0;
+            justify-content: center;
+        }
+        .left .headline-container {
+            align-items: center;
+        }
+        .left .headline-container h1 {
+            font-size: 4.5rem;
+            text-align: center;
+        }
+        .left .headline-container h2 {
+            font-size: 1.4rem;
+        }
+        footer .disclaimer {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 2000px) {
+        :root {
+            font-size: 26px;
+        }
+        .left .button {
+            font-size: 22px;
+        }
+        .button1 {
+            width: 300px;
+            height: 75px;
+        }
+        .button2 {
+            width: 230px;
+            height: 75px;
+        }
+    }
+
